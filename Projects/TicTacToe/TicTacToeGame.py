@@ -63,6 +63,7 @@ class TicTacToeGame:
                 x, y = map(lambda n: int(n) - 1, input().split())
             self.points[y * self.size + x] = self.side_flag
             if self._check_from_point(x, y):
+                self.show()
                 print(f"'{self.side_flag}' ПОБЕДИЛ")
                 break
             if self.side_flag == 'X':
